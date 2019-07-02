@@ -17,6 +17,8 @@ const idDiv = document.getElementById("idDiv");
 // Quitamos los espacios a la cadena de texto
 const sinEspacios = texto.replace(/ /g,''); 
 
+console.info(sinEspacios);
+
 
 // Función que devuelve true si la cadena está compuesta enteramente por MAYÚSCULAS 
 function mayusculasAll(sinEspacios)
