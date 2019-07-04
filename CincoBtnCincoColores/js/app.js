@@ -1,10 +1,10 @@
-const arrayColors = ["red", "green", "blue", "pink", "cyan"];
+const arrayColors = ["Red", "Green", "Blue", "Pink", "Cyan"];
 
 
 for (i = 0; i < 5; i++) {
     const btn = document.createElement("button");
     btn.type = "button";
-    btn.textContent = "Click here " + arrayColors[i];
+    btn.textContent = arrayColors[i];
     btn.id = arrayColors[i];
     document.body.appendChild(btn);
     document.write("<br/>");
