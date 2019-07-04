@@ -10,18 +10,18 @@ strNumber.addEventListener('keypress', function(event)
     for(i = 1; i <= 10; i++)
     {
         // Creamos un tr
-        const tr = document.createElement("tr");
+        const tr = document.createElement("tr");           // Vamos creando los tr 
 
-        const td1 = document.createElement("td");          // Creamos primer td
-        td1.textContent = " " + valorInput + " x " + i ;   // Generamos contenido ( valor del input signo x y valor de i)
-        tr.appendChild(td1);                               // Añadimos primer td al tr 
+        const td1 = document.createElement("td");          // Creamos los td correspondientes a la primera celda de los tr
+        td1.textContent = " " + valorInput + " x " + i ;   // Generamos los contenidos de los td ( valor del input signo x y valor de i)
+        tr.appendChild(td1);                               // Los añadimos al tr 
 
-        const td2 = document.createElement("td");          // Creamos segundo td
-        td2.textContent = " " + valorInput * i + " ";      // Generamos contenido (valor del input * i) 
-        tr.appendChild(td2);                               // Añadimos segundo td al tr 
+        const td2 = document.createElement("td");          // Creamos los td correspondientes a la segunda celdad de los tr
+        td2.textContent = " " + valorInput * i + " ";      // Generamos los contenidos de los td (valor del input * i) 
+        tr.appendChild(td2);                               // Los añadimos al tr
 
         //Añadimos el tr con sus td al idTbody
-        idTbody.appendChild(tr);
+        idTbody.appendChild(tr);                           // Por útlimo añadimos los tr al tbody
     }
     }
 })
