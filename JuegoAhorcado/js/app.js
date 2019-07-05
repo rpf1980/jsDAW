@@ -29,7 +29,7 @@ idLetra.addEventListener('keypress', function (event) {
         // Recorremos el arrayTextoSolucion para comparar la letra del input
         if(arrayTextoSolucion.includes(inputChar)){
 
-            
+            const pos = arrayTextoSolucion.indexOf(inputChar);
 
         }
 
@@ -37,3 +37,9 @@ idLetra.addEventListener('keypress', function (event) {
 })
 
 // Funciones aparte
+function arrayPosicionesCaracter()
+{
+    const array = ["h","o","l","a"];
+
+    return array.length;
+}
