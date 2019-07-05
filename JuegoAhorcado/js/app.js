@@ -26,7 +26,9 @@ idLetra.addEventListener('keypress', function (event) {
     // Entramos si pulsamos enter
     if (event.key === 'Enter') {
 
-        // Recorremos el arrayTextoSolucion para comparar la letra del input
+        // Tenemos que buscar sobre el arrayTextoSolucion tantos caracteres que coincidan 
+        // con lo escrito en el input y cambiarlos por el guión en esa posición pero
+        // del arrayTextoJuego ( y así ir colocando letras en su sitio )  
         if(arrayTextoSolucion.includes(inputChar)){
 
             const pos = arrayTextoSolucion.indexOf(inputChar);
@@ -37,9 +39,16 @@ idLetra.addEventListener('keypress', function (event) {
 })
 
 // Funciones aparte
-function arrayPosicionesCaracter()
+function arrayPosicionesCaracter(arrayOriginal, char)
 {
-    const array = ["h","o","l","a"];
+    let contador = 0;
 
-    return array.length;
+    for(i = 0; i < arrayOriginal.length; i++)
+    {
+        if(arrayOriginal[i] === char)
+        {
+            contador++;
+        }
+    }
+    
 }
