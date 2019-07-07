@@ -50,11 +50,15 @@ function arrayPosicionesCaracter(arrayOriginal, char)
         {
             pos = arrayOriginal.indexOf(arrayOriginal[i]);  // Tomamos la posición del caracter ( caracter del array que coincide con el caracter que vamos buscando )
             arrayDePosiciones.push(pos); // Guardamos la posición en el array
-            arrayOriginal.splice(pos,1,'x'); // En este punto debemos sustituir el caracter por otro ( ejemplo una x ) ya que indexOf solo devuelve la posición del primer caracter encontrado y queremos todas las posiciones por si hay más caracteres iguales
+
+            console.log(arrayDePosiciones);
+            arrayOriginal.splice(pos,1,"x"); // En este punto debemos sustituir el caracter por otro ( ejemplo una x ) ya que indexOf solo devuelve la posición del primer caracter encontrado y queremos todas las posiciones por si hay más caracteres iguales
 
         }
 
         arrayPosicionesCaracter(arrayOriginal, char); // Llamada recursiva de la función para que siga hasta que acaben las interaciones del for
     }
+
+    return arrayDePosiciones;
     
 }
