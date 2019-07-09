@@ -36,25 +36,26 @@ function addEventToButtons() {
         button.addEventListener('click', function (event) {
 
             const charBtn = event.target.id; // Recordemos que los id's de los botones corresponden al propio caracter que se busca
-
+            let ponLosChar = null;
             // Comprobamos que el botón pulsado ( letra que sea ) está en nuestra palabra oculta
             if (arrayTextoSolucion.includes(charBtn) && intentos != 5) {
                 const posicionesGuardadas = guardaPosicionesArray(arrayTextoSolucion, charBtn); // Posiciones del caracter sobre texto solución
-                let ponLosChar = pintaCaracter(arrayTextoOculto, posicionesGuardadas, charBtn); // Sustituimos los guiones bajos por el caracter en las mismas posiciones pero en el array de la palabra oculta 
+                ponLosChar = pintaCaracter(arrayTextoOculto, posicionesGuardadas, charBtn); // Sustituimos los guiones bajos por el caracter en las mismas posiciones pero en el array de la palabra oculta 
                 ponLosChar = ponLosChar.join(" ");
                 textoOculto.textContent = ponLosChar;
 
-                
             } else {
                 intentos++;
 
                 idIntentos.textContent = parseInt(intentos);
+            }
 
-                if (intentos >= 5 && intentos < ponLosChar.length) {
-
-                    idMensaje.textContent = "Agotaste los 5 errores permitidos";
-                }
-                
+            if (intentos >= 5) {
+                idMensaje.textContent = "Agotaste los 5 errores permitidos";
+            }
+            if(!ponLosChar.includes('_'))
+            {
+                idMensaje.textContent = "Ganaste !!!";
             }
 
         });
