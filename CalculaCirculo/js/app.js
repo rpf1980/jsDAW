@@ -2,14 +2,14 @@
 idRadio = document.getElementById("idRadio");
 idResult = document.getElementById("idResult");
 
-idRadio.addEventListener('change', function(event){
+idRadio.addEventListener('keypress', function(event){
 
     let radioValue = event.target.value;
     const pi = Math.PI;
     radioValue = radioValue * radioValue;
     let area = pi * radioValue;
 
-    idResult.textContext = radioValue;
+    idResult.textContext = area;
 
-    console.log(idResult.value);
+    console.log(idResult.textContext);
 });
