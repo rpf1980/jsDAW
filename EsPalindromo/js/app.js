@@ -18,7 +18,6 @@ function quitaAcentos(cadena)
     let copia = "";
     const con = "áàäéèëíìïóòöúùuñÁÀÄÉÈËÍÌÏÓÒÖÚÙÜÑçÇ";
     const sin = "aaaeeeiiiooouuunAAAEEEIIIOOOUUUNcC";
-    let contador = 0;
 
     for(i = 0; i < cadena.length; i++)
     {
